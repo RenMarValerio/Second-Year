@@ -12,49 +12,49 @@ Um site especial para celebrar 2 anos de relacionamento, com cronologia interati
 
 ## 📦 Estrutura do Projeto
 
-namoro-site/
-│
-├── app.py                      # Backend principal (Flask)
-├── requirements.txt            # Dependências Python (Flask, SQLAlchemy, etc.)
-├── README.md                   # Instruções do projeto (opcional)
-│
-├── static/
-│   ├── css/
-│   │   ├── bootstrap.min.css   # Bootstrap 5
-│   │   └── custom.css          # Seus estilos personalizados
-│   │
-│   ├── js/
-│   │   ├── core/               # Scripts essenciais
-│   │   │   ├── contador.js     # Cálculo de dias juntos
-│   │   │   └── animacoes.js    # Efeitos de hover/scroll
-│   │   │
-│   │   ├── modulos/            # Funcionalidades específicas
-│   │   │   ├── mapa.js         # Google Maps/Leaflet
-│   │   │   ├── jogo_memoria.js # Lógica do jogo
-│   │   │   └── botao_fugitivo.js # Botão "Não" que foge
-│   │   │
-│   │   └── main.js             # Inicializa todos os módulos
-│   │
-│   ├── img/
-│   │   ├── polaroids/          # Fotos no estilo Polaroid
-│   │   ├── timeline/           # Imagens da linha do tempo
-│   │   └── jogos/             # Fotos para o jogo da memória
-│   │
-│   ├── videos/                 # Vídeos locais (opcional)
-│   └── audio/                  # Músicas locais (ex: mais_ninguem.mp3)
-│
-└── templates/                  # Todas as páginas HTML
-    ├── base.html               # Template base (nav, footer)
-    ├── index.html              # Página inicial
-    ├── timeline.html           # Linha do tempo
-    ├── galeria.html            # Galeria (polaroids)
-    ├── cartas.html             # Diário (com login)
-    ├── playlist.html           # Playlist do amor
-    ├── lugares.html            # Mapa interativo
-    ├── futuros.html            # Planos futuros
-    ├── jogos.html              # Jogos e surpresas
-    └── primeiro_encontro.html  # Página do Shopping Estação
-
+namoro-site/<br>
+│<br>
+├── app.py                      # Backend principal (Flask)<br>
+├── requirements.txt            # Dependências Python (Flask, SQLAlchemy, etc.)<br>
+├── README.md                   # Instruções do projeto (opcional)<br>
+│<br>
+├── static/<br>
+│   ├── css/<br>
+│   │   ├── bootstrap.min.css   # Bootstrap 5<br>
+│   │   └── custom.css          # Seus estilos personalizados<br>
+│   │<br>
+│   ├── js/<br>
+│   │   ├── core/<br>               # Scripts essenciais<br>
+│   │   │   ├── contador.js     # Cálculo de dias juntos<br>
+│   │   │   └── animacoes.js    # Efeitos de hover/scroll<br>
+│   │   │<br>
+│   │   ├── modulos/            # Funcionalidades específicas<br>
+│   │   │   ├── mapa.js         # Google Maps/Leaflet<br>
+│   │   │   ├── jogo_memoria.js # Lógica do jogo<br>
+│   │   │   └── botao_fugitivo.js # Botão "Não" que foge<br>
+│   │   │<br>
+│   │   └── main.js             # Inicializa todos os módulos<br>
+│   │<br>
+│   ├── img/<br>
+│   │   ├── polaroids/          # Fotos no estilo Polaroid<br>
+│   │   ├── timeline/           # Imagens da linha do tempo<br>
+│   │   └── jogos/             # Fotos para o jogo da memória<br>
+│   │<br>
+│   ├── videos/                 # Vídeos locais (opcional)<br>
+│   └── audio/                  # Músicas locais (ex: mais_ninguem.mp3)<br>
+│<br>
+└── templates/                  # Todas as páginas HTML<br>
+    ├── base.html               # Template base (nav, footer)<br>
+    ├── index.html              # Página inicial<br>
+    ├── timeline.html           # Linha do tempo<br>
+    ├── galeria.html            # Galeria (polaroids)<br>
+    ├── cartas.html             # Diário (com login)<br>
+    ├── playlist.html           # Playlist do amor<br>
+    ├── lugares.html            # Mapa interativo<br>
+    ├── futuros.html            # Planos futuros<br>
+    ├── jogos.html              # Jogos e surpresas<br>
+    └── primeiro_encontro.html  # Página do Shopping Estação<br>
+<br>
     
 ## 🚀 Como Executar Localmente
 
