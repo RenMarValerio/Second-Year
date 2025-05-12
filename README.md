@@ -49,7 +49,6 @@ namoro-site/<br>
     ├── timeline.html           # Linha do tempo<br>
     ├── galeria.html            # Galeria (polaroids)<br>
     ├── cartas.html             # Diário (com login)<br>
-    ├── playlist.html           # Playlist do amor<br>
     ├── lugares.html            # Mapa interativo<br>
     ├── futuros.html            # Planos futuros<br>
     ├── jogos.html              # Jogos e surpresas<br>
