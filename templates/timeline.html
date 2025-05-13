@@ -4,3 +4,13 @@
 <h1>Linha do Tempo</h1>
 <p>Essa é a página da nossa história juntos ❤️</p>
 {% endblock %}
+
+{% block head %}
+{{ super() }}
+<audio id="bgMusic" loop>
+    <source src="{{ url_for('static', filename='./music/too_sweet.mp3') }}" type="audio/mpeg">
+</audio>
+
+
+<script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
+{% endblock %}

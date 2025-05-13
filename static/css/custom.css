@@ -114,10 +114,10 @@ main {
 }
 
 .contador-dias {
-    background: rgba(255, 251, 254, 0.9);
+    background: rgba(255, 251, 254, 0.39);
     display: inline-block;
     font-family: 'Pacifico', cursive;
-    color: #62043C;
+    color: #3b0325;
 }
 
 .btn-romantico {
@@ -142,3 +142,45 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #CBEEF3;
 }
+
+/* Estilos do Carrossel */
+.carousel {
+    z-index: 0;
+}
+
+.carousel-item {
+    transition: opacity 1s ease !important; /* Efeito fade suave */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background: rgba(12, 15, 49, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Ajuste do Overlay para manter contraste */
+.hero-overlay {
+    background: linear-gradient(135deg, 
+        rgba(12, 15, 49, 0.7) 0%, 
+        rgba(98, 4, 60, 0.6) 50%,
+        rgba(184, 12, 9, 0.4) 100%);
+}
+
+/* Garantir que o conteúdo fique acima do carrossel */
+.hero-content {
+    z-index: 10;
+}
+
