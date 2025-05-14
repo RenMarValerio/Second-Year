@@ -1,16 +1,73 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h1>Linha do Tempo</h1>
-<p>Essa é a página da nossa história juntos ❤️</p>
-{% endblock %}
-
 {% block head %}
 {{ super() }}
 <audio id="bgMusic" loop>
-    <source src="{{ url_for('static', filename='./music/too_sweet.mp3') }}" type="audio/mpeg">
+    <source src="{{ url_for('static', filename='music/our_song.mp3') }}" type="audio/mpeg">
 </audio>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
+{% endblock %}
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
+{% block content %}
+<section class="timeline-container py-5">
+    <div class="container-fluid">
+        <h2 class="text-center mb-5 display-4 fw-bold">Nossa Linha do Tempo</h2>
+        
+        <!-- Container do Scroll Horizontal -->
+        <div class="timeline-scroll-wrapper">
+            <div class="timeline-horizontal">
+                {% for evento in eventos %}
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <div class="timeline-card">
+                        <div class="timeline-date">{{ evento.data }}</div>
+                        
+                        <!-- Mídia (Foto/Video) -->
+                        <div class="timeline-media">
+                            {% if evento.tipo == 'video' %}
+                            <video controls class="img-fluid rounded-top">
+                                <source src="{{ url_for('static', filename=evento.midia) }}" type="video/mp4">
+                            </video>
+                            {% else %}
+                            <img src="{{ url_for('static', filename=evento.midia) }}" 
+                                 class="img-fluid rounded-top" 
+                                 alt="{{ evento.titulo }}"
+                                 loading="lazy">
+                            {% endif %}
+                        </div>
+                        
+                        <div class="timeline-content p-3">
+                            <h3 class="h5">{{ evento.titulo }}</h3>
+                            <p class="mb-0">{{ evento.descricao }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Controles de Navegação -->
+        <div class="timeline-controls text-center mt-4">
+            <button class="btn btn-sm btn-outline-pink mx-1 timeline-prev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-pink mx-1 timeline-next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
 {% endblock %}

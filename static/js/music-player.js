@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'galeria': 'italiano.mp3',
         'cartas': 'mais_ninguem.mp3',
         'lugares':'electric_love.mp3',
-        'planos':'something_just_like_this.mp3',
+        'futuros':'something_just_like_this.mp3',
         'jogos':'maria.mp3',
         'primeiro_encontro':'mi_fa_male.mp3'
         // Adicione mais páginas e músicas conforme necessário
