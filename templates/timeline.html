@@ -3,71 +3,226 @@
 {% block head %}
 {{ super() }}
 <audio id="bgMusic" loop>
-    <source src="{{ url_for('static', filename='music/our_song.mp3') }}" type="audio/mpeg">
+    <source src="{{ url_for('static', filename='./music/too_sweet.mp3') }}" type="audio/mpeg">
 </audio>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
-{% endblock %}
-
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-<section class="timeline-container py-5">
-    <div class="container-fluid">
-        <h2 class="text-center mb-5 display-4 fw-bold">Nossa Linha do Tempo</h2>
-        
-        <!-- Container do Scroll Horizontal -->
-        <div class="timeline-scroll-wrapper">
-            <div class="timeline-horizontal">
-                {% for evento in eventos %}
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
-                    <div class="timeline-card">
-                        <div class="timeline-date">{{ evento.data }}</div>
-                        
-                        <!-- Mídia (Foto/Video) -->
-                        <div class="timeline-media">
-                            {% if evento.tipo == 'video' %}
-                            <video controls class="img-fluid rounded-top">
-                                <source src="{{ url_for('static', filename=evento.midia) }}" type="video/mp4">
-                            </video>
-                            {% else %}
-                            <img src="{{ url_for('static', filename=evento.midia) }}" 
-                                 class="img-fluid rounded-top" 
-                                 alt="{{ evento.titulo }}"
-                                 loading="lazy">
-                            {% endif %}
-                        </div>
-                        
-                        <div class="timeline-content p-3">
-                            <h3 class="h5">{{ evento.titulo }}</h3>
-                            <p class="mb-0">{{ evento.descricao }}</p>
-                        </div>
-                    </div>
+<div class="timeline-diary">
+    <!-- Evento 1 -->
+    <section class="diary-page active" data-date="2023-05-18">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/primeira-foto.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Nosso começo</div>
                 </div>
-                {% endfor %}
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">18/05/2023</h3>
+                <h2 class="diary-title">Primeira foto juntos</h2>
+                <p class="handwriting">Lembro de ter tirado ela pouco depois de começarmos a namorar, 3 minutos depois
+                    de eu ouvir a melhor palavra do mundo: seu "sim" <span class="heart-emoji">💘</span></p>
             </div>
         </div>
-        
-        <!-- Controles de Navegação -->
-        <div class="timeline-controls text-center mt-4">
-            <button class="btn btn-sm btn-outline-pink mx-1 timeline-prev">
-                <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="btn btn-sm btn-outline-pink mx-1 timeline-next">
-                <i class="bi bi-chevron-right"></i>
-            </button>
-        </div>
-    </div>
-</section>
-{% endblock %}
+    </section>
 
-{% block scripts %}
-{{ super() }}
+    <!--Evento 2-->
+
+    <section class="diary-page" data-date="2023-06-18">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/primeiro-mes.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Nosso primeiro mês</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">18/06/2023</h3>
+                <h2 class="diary-title">Nosso primeiro mês juntos</h2>
+                <p class="handwriting">Se lembra desse dia? Fomos para a festa de aniversário do Trevisan (Nossa primeira festa) e quando reparamos que estavamos completando um mês corremos tirar essa foto<span class="heart-emoji">💘</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!--Evento 2-->
+
+    <section class="diary-page" data-date="2023-06-18">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/noite-sem-sono.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Noite aleátoria na Federal</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">Não lembro o dia hehe (Mas todo dia com você é especial)</h3>
+                <h2 class="diary-title">Uma noite em que eu e você (Mais eu) estavamos sem sono</h2>
+                <p class="handwriting">Não sei se você se lembra desse dia, mas lembro que foi muito bom e bem no comecinho do nosso namoro, quando estava reparando que te amo cada vez mais, onde nos beijamos na frente da fonto na pracinha na frente da Federal, ouvindo "The chain" e pouco depois oficializamos "Mais Ninguém" como nossa música.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Evento 3-->
+
+    <section class="diary-page" data-date="Seu niver">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/barigui.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Bike no Barigui</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">Sei lá! Época de prova</h3>
+                <h2 class="diary-title">Nosso dia romântico no Barigui</h2>
+                <p class="handwriting">Eu lembro que esse dia você estava muito nervosa com a faculdade, por causa da época de provas, mas já tinha estudado tudo que podia e não conseguia mais se entender. <br>Então eu dei a ideia de irmos para o Parque Barigui darmos uma volta, mal nós sabiamos que seria muito bom, alugamos bike, demos volta pelo Parque todo, comemos hamburguer e fomos para o Parque Shopping Barigui e nos sentimos pobres kkkkk</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Evento 4-->
+
+    <section class="diary-page" data-date="Seu niver">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/careca-lustrada.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Niver do meu amoizinho</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">12/09/2023</h3>
+                <h2 class="diary-title">Niver da lindinha</h2>
+                <p class="handwriting">Olha que bela careca! Mas esse dia foi muito bom, quando fomos eu, você, seus pais, sua prima e seu irmão comemorar seu aniversário no Coco Bambu e depois tiramos umas fotinhos no Terrazza 40 (Pior que só fomos tirar foto kkkk) mas foi muito bom (principalmente por você ter feito 18) </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Evento 5-->
+
+    <section class="diary-page" data-date="Prainha">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/prainha.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Alguns dias de calmaria</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">Novembro! Só lembro disso da época</h3>
+                <h2 class="diary-title">Primeira viagem juntos</h2>
+                <p class="handwriting">A primeira vez que viajamos juntos, você tava louca pra pegar uma praia e eu queria que você conhecesse minha avó, então pronto kkkkk Conheceu ela (Ela te adorou) fomos para lá de Bla Bla Car, quando era liberado e passamos uns dias aproveitando.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Evento 6-->
+
+    <section class="diary-page" data-date="Prainha">
+        <div class="page-decoration">
+            <img src="{{ url_for('static', filename='./image/eventos/floral-corner.png') }}"
+                class="decoration-top-right" alt="Floral decoration">
+        </div>
+
+        <div class="diary-content">
+            <div class="polaroid-container">
+                <div class="polaroid-photo" data-tilt data-tilt-scale="1.05">
+                    <img src="{{ url_for('static', filename='image/eventos/palhaçada.jpg') }}"
+                        alt="Nosso primeiro encontro">
+                    <div class="polaroid-caption handwriting">Palhaçada</div>
+                </div>
+                <div class="polaroid-shadow"></div>
+            </div>
+
+            <div class="diary-text">
+                <h3 class="diary-date">Não lembro o dia</h3>
+                <h2 class="diary-title">Para fechar com chave de ouro!</h2>
+                <p class="handwriting">A linha do tempo está ficando grande e temos muita coisa para ver ainda, mas para fechar com chave e uma humilhação...</p>
+            </div>
+        </div>
+    </section>
+    
+
+</div>
+
+<!-- Navegação -->
+<div class="timeline-nav">
+    <button class="nav-arrow prev"><i class="bi bi-chevron-left"></i></button>
+    <div class="timeline-progress"></div>
+    <button class="nav-arrow next"><i class="bi bi-chevron-right"></i></button>
+</div>
+
 <script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="{{ url_for('static', filename='js/vanilla-tilt.min.js') }}"></script>
 <script>
+    // Inicializa AOS apenas uma vez
     AOS.init({
         duration: 800,
+        easing: 'ease-in-out-quad',
         once: true
+    });
+    
+    // Inicializa efeito de inclinação em todas as polaroids
+    document.querySelectorAll(".polaroid-photo").forEach(el => {
+        VanillaTilt.init(el, {
+            max: 5,
+            glare: true,
+            "max-glare": 0.2
+        });
     });
 </script>
 {% endblock %}
+

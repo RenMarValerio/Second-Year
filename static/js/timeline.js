@@ -1,50 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const timeline = document.querySelector('.timeline-horizontal');
-    const prevBtn = document.querySelector('.timeline-prev');
-    const nextBtn = document.querySelector('.timeline-next');
+    const pages = document.querySelectorAll('.diary-page');
+    const prevBtn = document.querySelector('.timeline-nav .prev');
+    const nextBtn = document.querySelector('.timeline-nav .next');
+    let currentPage = 0;
     
-    // Scroll Suave
-    nextBtn.addEventListener('click', () => {
-        timeline.scrollBy({
-            left: 350,
-            behavior: 'smooth'
+    // Mostrar a primeira página
+    showPage(currentPage);
+    
+    // Event listeners para navegação
+    nextBtn.addEventListener('click', function() {
+        if (currentPage < pages.length - 1) {
+            changePage(currentPage, currentPage + 1);
+            currentPage++;
+        }
+    });
+    
+    prevBtn.addEventListener('click', function() {
+        if (currentPage > 0) {
+            changePage(currentPage, currentPage - 1);
+            currentPage--;
+        }
+    });
+    
+    function changePage(oldIndex, newIndex) {
+        // Animação de saída
+        pages[oldIndex].classList.remove('active');
+        pages[oldIndex].classList.add('exiting');
+        
+        // Depois da animação, mostrar nova página
+        setTimeout(() => {
+            pages[oldIndex].classList.remove('exiting');
+            showPage(newIndex);
+        }, 800);
+    }
+    
+    function showPage(index) {
+        // Esconder todas as páginas primeiro
+        pages.forEach(page => {
+            page.classList.remove('active');
+            page.style.display = 'none';
         });
-    });
+        
+        // Mostrar a página atual
+        pages[index].style.display = 'block';
+        setTimeout(() => {
+            pages[index].classList.add('active');
+        }, 10);
+        
+        // Atualizar progresso
+        updateProgress(index);
+    }
     
-    prevBtn.addEventListener('click', () => {
-        timeline.scrollBy({
-            left: -350,
-            behavior: 'smooth'
+    function updateProgress(index) {
+        const progress = document.querySelector('.timeline-progress');
+        const percentage = ((index + 1) / pages.length) * 100;
+        progress.style.width = `${percentage}%`;
+    }
+    
+    // Evento de clique nas datas
+    const diaryDates = document.querySelectorAll('.diary-date');
+    diaryDates.forEach(date => {
+        date.addEventListener('click', function() {
+            this.innerHTML = 'Dia em que minha vida mudou ❤️';
         });
-    });
-    
-    // Efeito de Arrastar
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    
-    timeline.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - timeline.offsetLeft;
-        scrollLeft = timeline.scrollLeft;
-        timeline.style.cursor = 'grabbing';
-    });
-    
-    timeline.addEventListener('mouseleave', () => {
-        isDown = false;
-        timeline.style.cursor = 'grab';
-    });
-    
-    timeline.addEventListener('mouseup', () => {
-        isDown = false;
-        timeline.style.cursor = 'grab';
-    });
-    
-    timeline.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - timeline.offsetLeft;
-        const walk = (x - startX) * 2;
-        timeline.scrollLeft = scrollLeft - walk;
     });
 });

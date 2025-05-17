@@ -37,3 +37,26 @@ def primeiro_encontro():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# Timeline Backend
+
+@app.route('/timeline')
+def timeline():
+    eventos = [
+        {
+            'data': '16/04/2023',
+            'titulo': 'Nosso Primeiro Encontro',
+            'descricao': 'Nosso dia no Shopping Estação, onde fomos "Assistir Super Mario Bros"',
+            'midia': './static/image/timeline/shopping.jpeg',
+            'tipo': 'foto'
+        },
+        {
+            'data': '20/06/2023',
+            'titulo': 'Primeira Viagem',
+            'descricao': 'Fim de semana na praia',
+            'midia': 'video/timeline/viagem.mp4',
+            'tipo': 'video'
+        },
+        # Adicione mais eventos...
+    ]
+    return render_template('timeline.html', eventos=eventos)

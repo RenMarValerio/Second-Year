@@ -2,8 +2,6 @@
 
 Um site especial para celebrar 2 anos de relacionamento, com cronologia interativa, galeria de fotos, diário secreto e jogos personalizados.
 
-![Preview](static/img/preview.jpg) *(Adicione uma imagem de preview depois)*
-
 ## 🛠️ Tecnologias
 - **Frontend**: HTML5, CSS3, Bootstrap 5, JavaScript
 - **Backend**: Python (Flask)
