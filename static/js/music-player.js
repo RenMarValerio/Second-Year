@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const musicTracks = {
         'home': 'make_you_mine.mp3',
         'timeline': 'too_sweet.mp3',
-        'galeria': 'italiano.mp3',
-        'cartas': 'mais_ninguem.mp3',
+        'galeria': 'mais_ninguem.mp3',
         'lugares':'electric_love.mp3',
         'futuros':'something_just_like_this.mp3',
-        'jogos':'maria.mp3',
-        'primeiro_encontro':'mi_fa_male.mp3'
+        'jogos':'maria.mp3'
         // Adicione mais páginas e músicas conforme necessário
     };
 

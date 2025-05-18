@@ -1,0 +1,99 @@
+/* Estilos Gerais */
+.dreams-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dreams-header {
+    margin-bottom: 50px;
+}
+
+.dreams-header h1 {
+    font-size: 3.5rem;
+    color: #0C0F31;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #62043C;
+}
+
+.heart-divider {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+/* Grid de Sonhos */
+.dreams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.dream-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dream-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.dream-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.dream-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dream-card:hover .dream-image img {
+    transform: scale(1.05);
+}
+
+.dream-content {
+    padding: 20px;
+}
+
+.dream-title {
+    font-size: 1.8rem;
+    color: #0C0F31;
+    margin-bottom: 10px;
+}
+
+.dream-description {
+    color: #333;
+    line-height: 1.6;
+}
+
+.dreams-footer {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: #B80C09;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dreams-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .dreams-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dream-image {
+        height: 200px;
+    }
+}

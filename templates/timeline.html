@@ -1,15 +1,5 @@
 {% extends "base.html" %}
 
-{% block head %}
-{{ super() }}
-<audio id="bgMusic" loop>
-    <source src="{{ url_for('static', filename='./music/too_sweet.mp3') }}" type="audio/mpeg">
-</audio>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-{% endblock %}
-
 {% block content %}
 <div class="timeline-diary">
     <!-- Evento 1 -->
@@ -59,7 +49,9 @@
             <div class="diary-text">
                 <h3 class="diary-date">18/06/2023</h3>
                 <h2 class="diary-title">Nosso primeiro mês juntos</h2>
-                <p class="handwriting">Se lembra desse dia? Fomos para a festa de aniversário do Trevisan (Nossa primeira festa) e quando reparamos que estavamos completando um mês corremos tirar essa foto<span class="heart-emoji">💘</span></p>
+                <p class="handwriting">Se lembra desse dia? Fomos para a festa de aniversário do Trevisan (Nossa
+                    primeira festa) e quando reparamos que estavamos completando um mês corremos tirar essa foto<span
+                        class="heart-emoji">💘</span></p>
             </div>
         </div>
     </section>
@@ -85,7 +77,10 @@
             <div class="diary-text">
                 <h3 class="diary-date">Não lembro o dia hehe (Mas todo dia com você é especial)</h3>
                 <h2 class="diary-title">Uma noite em que eu e você (Mais eu) estavamos sem sono</h2>
-                <p class="handwriting">Não sei se você se lembra desse dia, mas lembro que foi muito bom e bem no comecinho do nosso namoro, quando estava reparando que te amo cada vez mais, onde nos beijamos na frente da fonto na pracinha na frente da Federal, ouvindo "The chain" e pouco depois oficializamos "Mais Ninguém" como nossa música.</p>
+                <p class="handwriting">Não sei se você se lembra desse dia, mas lembro que foi muito bom e bem no
+                    comecinho do nosso namoro, quando estava reparando que te amo cada vez mais, onde nos beijamos na
+                    frente da fonto na pracinha na frente da Federal, ouvindo "The chain" e pouco depois oficializamos
+                    "Mais Ninguém" como nossa música.</p>
             </div>
         </div>
     </section>
@@ -111,7 +106,11 @@
             <div class="diary-text">
                 <h3 class="diary-date">Sei lá! Época de prova</h3>
                 <h2 class="diary-title">Nosso dia romântico no Barigui</h2>
-                <p class="handwriting">Eu lembro que esse dia você estava muito nervosa com a faculdade, por causa da época de provas, mas já tinha estudado tudo que podia e não conseguia mais se entender. <br>Então eu dei a ideia de irmos para o Parque Barigui darmos uma volta, mal nós sabiamos que seria muito bom, alugamos bike, demos volta pelo Parque todo, comemos hamburguer e fomos para o Parque Shopping Barigui e nos sentimos pobres kkkkk</p>
+                <p class="handwriting">Eu lembro que esse dia você estava muito nervosa com a faculdade, por causa da
+                    época de provas, mas já tinha estudado tudo que podia e não conseguia mais se entender. <br>Então eu
+                    dei a ideia de irmos para o Parque Barigui darmos uma volta, mal nós sabiamos que seria muito bom,
+                    alugamos bike, demos volta pelo Parque todo, comemos hamburguer e fomos para o Parque Shopping
+                    Barigui e nos sentimos pobres kkkkk</p>
             </div>
         </div>
     </section>
@@ -137,7 +136,10 @@
             <div class="diary-text">
                 <h3 class="diary-date">12/09/2023</h3>
                 <h2 class="diary-title">Niver da lindinha</h2>
-                <p class="handwriting">Olha que bela careca! Mas esse dia foi muito bom, quando fomos eu, você, seus pais, sua prima e seu irmão comemorar seu aniversário no Coco Bambu e depois tiramos umas fotinhos no Terrazza 40 (Pior que só fomos tirar foto kkkk) mas foi muito bom (principalmente por você ter feito 18) </p>
+                <p class="handwriting">Olha que bela careca! Mas esse dia foi muito bom, quando fomos eu, você, seus
+                    pais, sua prima e seu irmão comemorar seu aniversário no Coco Bambu e depois tiramos umas fotinhos
+                    no Terrazza 40 (Pior que só fomos tirar foto kkkk) mas foi muito bom (principalmente por você ter
+                    feito 18) </p>
             </div>
         </div>
     </section>
@@ -163,7 +165,9 @@
             <div class="diary-text">
                 <h3 class="diary-date">Novembro! Só lembro disso da época</h3>
                 <h2 class="diary-title">Primeira viagem juntos</h2>
-                <p class="handwriting">A primeira vez que viajamos juntos, você tava louca pra pegar uma praia e eu queria que você conhecesse minha avó, então pronto kkkkk Conheceu ela (Ela te adorou) fomos para lá de Bla Bla Car, quando era liberado e passamos uns dias aproveitando.</p>
+                <p class="handwriting">A primeira vez que viajamos juntos, você tava louca pra pegar uma praia e eu
+                    queria que você conhecesse minha avó, então pronto kkkkk Conheceu ela (Ela te adorou) fomos para lá
+                    de Bla Bla Car, quando era liberado e passamos uns dias aproveitando.</p>
             </div>
         </div>
     </section>
@@ -189,11 +193,12 @@
             <div class="diary-text">
                 <h3 class="diary-date">Não lembro o dia</h3>
                 <h2 class="diary-title">Para fechar com chave de ouro!</h2>
-                <p class="handwriting">A linha do tempo está ficando grande e temos muita coisa para ver ainda, mas para fechar com chave e uma humilhação...</p>
+                <p class="handwriting">A linha do tempo está ficando grande e temos muita coisa para ver ainda, mas para
+                    fechar com chave e uma humilhação...</p>
             </div>
         </div>
     </section>
-    
+
 
 </div>
 
@@ -205,8 +210,13 @@
 </div>
 
 <script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script src="{{ url_for('static', filename='js/vanilla-tilt.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
+
 <script>
     // Inicializa AOS apenas uma vez
     AOS.init({
@@ -214,7 +224,7 @@
         easing: 'ease-in-out-quad',
         once: true
     });
-    
+
     // Inicializa efeito de inclinação em todas as polaroids
     document.querySelectorAll(".polaroid-photo").forEach(el => {
         VanillaTilt.init(el, {
@@ -226,3 +236,14 @@
 </script>
 {% endblock %}
 
+{% block head %}
+{{ super() }}
+<audio id="bgMusic" loop>
+    <source src="{{ url_for('static', filename='./music/too_sweet.mp3') }}" type="audio/mpeg">
+</audio>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}

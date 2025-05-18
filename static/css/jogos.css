@@ -1,0 +1,98 @@
+/* Estilo hero com background */
+.construction-hero {
+    position: relative;
+    min-height: 100vh;
+    background: url('../image/constructions.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.construction-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(12, 15, 49, 0.7); /* Cor de fundo escura com transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.construction-content {
+    text-align: center;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.construction-icon {
+    font-size: 3rem;
+    color: #ff6b8b;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.construction-title {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.construction-text {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.construction-buttons {
+    margin-top: 40px;
+}
+
+.btn-construction {
+    background-color: #ff6b8b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-construction:hover {
+    background-color: #ff8fab;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .construction-title {
+        font-size: 2.5rem;
+    }
+    
+    .construction-text {
+        font-size: 1.2rem;
+    }
+    
+    .btn-construction {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .construction-icon {
+        font-size: 2.5rem;
+        gap: 15px;
+    }
+}

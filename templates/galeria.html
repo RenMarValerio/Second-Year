@@ -1,11 +1,346 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
+<div class="gallery-container">
+    <!-- Filtros por ano -->
+    <div class="year-filters">
+        <button class="year-filter active" data-year="all">Todas</button>
+        <button class="year-filter" data-year="2023">2023</button>
+        <button class="year-filter" data-year="2024">2024</button>
+    </div>
+
+    <!-- Container das fotos -->
+    <div class="polaroid-grid">
+        <!-- Exemplo de item - você vai gerar esses dinamicamente -->
+        <div class="polaroid-item" data-year="2024" data-id="1">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img1_2023.jpg') }}" alt="Nosso primeiro mês">
+            </div>
+        </div>
+        
+        <div class="polaroid-item" data-year="2024" data-id="2">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img2_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="3">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img3_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+        <div class="polaroid-item" data-year="2024" data-id="4">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img4_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+        
+        <div class="polaroid-item" data-year="2024" data-id="5">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img5_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="6">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img6_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="7">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img7_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="8">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img8_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="9">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img9_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="10">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img10_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="11">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img11_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="12">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img12_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="13">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img13_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="14">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img14_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="15">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img15_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="16">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img16_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="17">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img17_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="18">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img18_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="19">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img19_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="20">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img20_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="21">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img21_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="22">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img22_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="23">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img23_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="24">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img24_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="25">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img25_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="26">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img26_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="27">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img27_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="28">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img28_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="29">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img29_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="30">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img30_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="31">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img31_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="32">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img32_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="33">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img33_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2023" data-id="34">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img34_2023.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="35">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img35_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="36">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img36_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="37">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img37_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="39">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img39_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="40">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img40_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="41">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img41_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="42">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img42_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="43">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img43_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="44">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img44_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="45">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img45_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="45">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img45_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="46">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img46_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="47">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img47_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="48">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img48_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="49">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img49_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="50">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img50_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="51">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img51_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="52">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img52_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+
+        <div class="polaroid-item" data-year="2024" data-id="53">
+            <div class="polaroid-frame">
+                <img src="{{ url_for('static', filename='image/polaroids/img53_2024.jpg') }}" alt="Aniversário">
+            </div>
+        </div>
+        
+        <!-- Adicione mais fotos conforme necessário -->
+    </div>
+
+    <!-- Lightbox para zoom -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-caption" class="handwriting"></p>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block head %}
@@ -14,5 +349,9 @@
     <source src="{{ url_for('static', filename='./music/italiano.mp3') }}" type="audio/mpeg">
 </audio>
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria.css') }}">
+
 <script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/galeria.js') }}"></script>
 {% endblock %}

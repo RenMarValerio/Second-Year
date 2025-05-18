@@ -1,11 +1,94 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
+<div class="dreams-container">
+    <div class="dreams-header text-center">
+        <h1 class="handwriting">Nossos Sonhos Futuros</h1>
+        <div class="heart-divider">💖</div>
+        <p class="subtitle">Tudo que planejamos construir juntos</p>
+    </div>
+
+    <div class="dreams-grid">
+        <!-- Sonho 1 -->
+        <div class="dream-card" data-aos="fade-up">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/viagem-mundo.png') }}"
+                    alt="Nós viajando pelo mundo">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Viajar pelo Mundo Juntos</h3>
+                <p class="dream-description">Explorando novos países e culturas lado a lado, criando memórias
+                    inesquecíveis em cada destino.</p>
+            </div>
+        </div>
+
+        <!-- Sonho 2 -->
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/sucesso-profissional.png') }}"
+                    alt="Nossas carreiras de sucesso">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Sucesso Profissional</h3>
+                <p class="dream-description">Você como Juíza renomada e eu como Engenheiro de Software especialista em
+                    IA, ambos realizados em nossas carreiras.</p>
+            </div>
+        </div>
+
+        <!-- Sonho 3 -->
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/morando-juntos.png') }}" alt="Nós morando juntos">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Nosso Lar</h3>
+                <p class="dream-description">Construindo nosso cantinho cheio de amor, onde cada detalhe terá um pouco
+                    de nós dois.</p>
+            </div>
+        </div>
+
+        <!-- Sonho 4 -->
+        <div class="dream-card" data-aos="fade-up">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/chacara.png') }}" alt="Nossa chácara dos sonhos">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Chácara dos Sonhos</h3>
+                <p class="dream-description">Nosso refúgio aos 50 anos, com piscina, espaço para receber amigos e muita
+                    natureza ao redor.</p>
+            </div>
+        </div>
+
+        <!-- Sonho 5 -->
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/casa-praia.png') }}" alt="Nossa casa na praia">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Casa na Praia</h3>
+                <p class="dream-description">Nosso segundo lar, onde poderemos relaxar ao som do mar e aproveitar o
+                    calor do sol juntos.</p>
+            </div>
+        </div>
+
+        <!-- Sonho 6 -->
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="dream-image">
+                <img src="{{ url_for('static', filename='image/dreams/projetos-tecnologia.png') }}"
+                    alt="Meus projetos de tecnologia">
+            </div>
+            <div class="dream-content">
+                <h3 class="dream-title handwriting">Sucesso em Tecnologia</h3>
+                <p class="dream-description">Meus projetos inovadores gerando impacto e reconhecimento, com você sempre
+                    ao meu lado apoiando.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dreams-footer text-center">
+        <p class="handwriting">E o melhor de tudo: vivendo cada um desses sonhos juntos!</p>
+    </div>
+</div>
 {% endblock %}
 
 {% block head %}
@@ -14,5 +97,8 @@
     <source src="{{ url_for('static', filename='./music/something_just_like_this.mp3') }}" type="audio/mpeg">
 </audio>
 
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/futuro.css') }}">
+
+<script src="{{ url_for('static', filename='js/futuro.js') }}"></script>
 <script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
 {% endblock %}

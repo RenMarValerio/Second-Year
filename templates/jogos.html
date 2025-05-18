@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
-<h1>Olha</h1>
+<div class="construction-hero">
+    <div class="construction-overlay">
+        <div class="construction-content">
+            <h1 class="construction-title handwriting">Cuidado 🛑 Obra a frente </h1>
+            <div class="construction-icon">
+                <i class="bi bi-heart-fill"></i>
+                <i class="bi bi-tools"></i>
+                <i class="bi bi-heart-fill"></i>
+            </div>
+            <p class="construction-text">Ainda está em construção a parte de jogos</p>
+            <p class="construction-text">Volte em breve para descobrir as surpresas!</p>
+            
+            <div class="construction-buttons">
+                <a href="{{ url_for('home') }}" class="btn btn-construction">
+                    <i class="bi bi-house-door"></i> Voltar para o Início
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block head %}
@@ -13,6 +28,10 @@
 <audio id="bgMusic" loop>
     <source src="{{ url_for('static', filename='./music/maria.mp3') }}" type="audio/mpeg">
 </audio>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jogos.css') }}">
+
+<script src="{{ url_for('static', filename='js/jogos.js') }}"></script>
 
 <script src="{{ url_for('static', filename='js/music-player.js') }}"></script>
 {% endblock %}
