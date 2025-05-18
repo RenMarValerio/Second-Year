@@ -2,7 +2,7 @@
 .construction-hero {
     position: relative;
     min-height: 100vh;
-    background: url('../image/constructions.png') no-repeat center center;
+    background: url('../image/code.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
